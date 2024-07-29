@@ -26,8 +26,8 @@
 ## Running Locally
 
 ```bash
-$ git clone https://github.com/nirajprakash/nirajprakash.github.io.git
-$ cd braydoncoyer.dev
+$ git clone https://github.com/charik28/portfolio.git
+$ cd portfolio
 $ npm install
 $ ng serve
 ```

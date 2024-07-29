@@ -22,36 +22,82 @@ export class MyAppsComponent implements OnInit {
   _mApps : AppType[] = [
 
     {
-     "id": "5131",
-     "name": "Sensify: Phone Sensors Plots",
-     "image": "assets/img/apps/sensify.webp",
-     "link": "https://play.google.com/store/apps/details?id=io.sensify.sensor",
-     "tab": "Android",
-     "caption": "In Jetpack Compose -",
-     "isFull": false,
-     "primary":"#3FD67D",
-     "background":"#E1E1E1"
-   },
-   {
-     "id": "5132",
-     "name": "Taru: Plant Finder & Weather",
-     "image": "assets/img/apps/taru.webp",
-     "link": "https://play.google.com/store/apps/details?id=com.taru",
-     "tab": "Android",
-     "isFull": false,
-     "caption": "In Android -",
-     "background":"#F5E7B4"
-   },
-   {
-     "id": "5133",
-     "name": "Hundi: Record Book",
-     "image": "assets/img/apps/hundi.webp",
-     "link": "https://play.google.com/store/apps/details?id=com.hundi.social",
-     "tab": "Android",
-     "caption": "In Flutter -",
-     "isFull": true,
-     "background":"#3CE79F"
-   }
+      "id": "5132",
+      "name": "GeoMapper: Spatial Analysis Tool",
+      "image": "assets/img/apps/geomapper.webp",
+      "link": "https://localhost:8080",
+      "tab": "Web",
+      "caption": "Built with Angular and Spring Boot -",
+      "isFull": true,
+      "primary": "#FF5733",
+      "background": "#F0F0F0"
+    },
+    {
+      "id": "5133",
+      "name": "TaskMaster: Project Management",
+      "image": "assets/img/apps/taskmaster.webp",
+      "link": "https://localhost:8081/taskmaster",
+      "tab": "Web",
+      "caption": "Developed using Angular -",
+      "isFull": false,
+      "primary": "#3498DB",
+      "background": "#E8E8E8"
+    },
+    {
+      "id": "5134",
+      "name": "HealthTracker: Fitness App",
+      "image": "assets/img/apps/healthtracker.webp",
+      "link": "https://localhost:8081/healthtracker",
+      "tab": "Android",
+      "caption": "In Kotlin -",
+      "isFull": true,
+      "primary": "#2ECC71",
+      "background": "#F5F5F5"
+    },
+    {
+      "id": "5135",
+      "name": "EduLearn: Online Learning Platform",
+      "image": "assets/img/apps/edulearn.webp",
+      "link": "https://localhost:8081/edulearn",
+      "tab": "Web",
+      "caption": "Using Angular and Spring Boot -",
+      "isFull": false,
+      "primary": "#9B59B6",
+      "background": "#EFEFEF"
+    }
+
+
+  /*{
+   "id": "5131",
+   "name": "Sensify: Phone Sensors Plots",
+   "image": "assets/img/apps/sensify.webp",
+   "link": "https://play.google.com/store/apps/details?id=io.sensify.sensor",
+   "tab": "Android",
+   "caption": "In Jetpack Compose -",
+   "isFull": false,
+   "primary":"#3FD67D",
+   "background":"#E1E1E1"
+ },
+ {
+   "id": "5132",
+   "name": "Taru: Plant Finder & Weather",
+   "image": "assets/img/apps/taru.webp",
+   "link": "https://play.google.com/store/apps/details?id=com.taru",
+   "tab": "Android",
+   "isFull": false,
+   "caption": "In Android -",
+   "background":"#F5E7B4"
+ },
+ {
+   "id": "5133",
+   "name": "Hundi: Record Book",
+   "image": "assets/img/apps/hundi.webp",
+   "link": "https://play.google.com/store/apps/details?id=com.hundi.social",
+   "tab": "Android",
+   "caption": "In Flutter -",
+   "isFull": true,
+   "background":"#3CE79F"
+ }*/
   ];
 
   private destroyed$: ReplaySubject<boolean> = new ReplaySubject(1);
@@ -121,7 +167,7 @@ export class MyAppsComponent implements OnInit {
 
       }),
       scan<number, boolean>((acc: number | boolean, val: number) => (val >= this._mThreshold || (acc ? val > 0 : false))),
-      // Distincts the resulting triggers 
+      // Distincts the resulting triggers
       distinctUntilChanged(),
       // Stop taking the first on trigger when aosOnce is set
       takeWhile(trigger => {
