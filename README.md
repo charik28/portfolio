@@ -1,3 +1,6 @@
+
+todo refactor the project info
+
 ![A preview](https://github.com/nirajprakash/nirajprakash.github.io/blob/main/images/banner.png)
 
 # Personal Portfolio 
